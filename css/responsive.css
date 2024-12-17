@@ -1,0 +1,40 @@
+@media (max-width: 992px) {
+    .header {
+        padding: 2rem 2.5rem;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+
+}
+
+@media (max-width: 832px) {
+    .service .container-service,
+    .tecnology .container-tecnology,
+    .countries .container-countries,
+    .footer .container-footer  {
+        display: flex;
+        flex-flow: column wrap;
+        padding: 6rem 2rem;
+        gap: 4rem;
+    }
+
+    .container-service .container-text,
+    .container-service .container-img {
+        width: 100%;
+    }
+
+    .container-tecnology .container-text,
+    .container-tecnology .container-img {
+        width: 100%;
+    }
+}

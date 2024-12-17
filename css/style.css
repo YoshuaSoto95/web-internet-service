@@ -1,0 +1,797 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Afacad Flux", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    color: var(--white);
+}
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --blue: #1899e4;
+    --dark-blue: #0a0a14;
+    --grey: #ccc8c8;
+}
+
+body {
+    background: var(--black);
+    width: 100%;
+}
+
+/* ---- HEADER ---- */
+
+header {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    padding: 2rem 4rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.logo:hover {
+    text-shadow: 0 0 50px var(--white);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-menu a {
+    padding-top: 12px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-menu a:hover {
+    border-bottom: 1px solid var(--blue);
+    color: var(--blue);
+}
+
+.toggle_btn {
+    padding-top: 10px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* ----- drowndown_menu ----- */
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 112px;
+    right: 0;
+    height: 0;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 600px;
+}
+
+.dropdown_menu li {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu li a {
+    font-size: 1.6rem;
+}
+
+/* ---- HOME ---- */
+
+.home {
+    background-image: url('../img/background-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+
+.container-home {
+    display: flex;
+    align-items: center;
+    padding: 16rem 4rem 6rem 4rem;
+}
+
+.container-text {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+}
+
+/* ---- HOME - TEXT ---- */
+
+.home .container-text h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.home .container-home h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.home .container-home p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--grey);
+    padding-bottom: 40px;
+}
+
+.home .container-home .cta-btn a {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 65px;
+    border: 1px solid transparent;
+    background-color: var(--blue);
+    transition: all 0.3s ease-in-out;
+}
+
+.home .container-home .cta-btn a:hover {
+    border: 1px solid var(--grey);
+    background: transparent;
+    box-shadow: 0 0 50px var(--white);
+}
+
+/* ---- HOME - ITEMS ---- */
+
+.container-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 4rem;
+    gap: 3rem;
+}
+
+.container-items .item {
+    background-color: var(--dark-blue);
+    border-radius: 10px;
+    width: 300px;
+    height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-items .item i {
+    color: var(--blue);
+    font-size: 2.2rem;
+    padding-bottom: 5px;
+}
+
+.container-items .item h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.container-items .item h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+.container-items .item h3 span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: none;
+    color: var(--grey);
+}
+
+.container-items .item p {
+    font-size: 0.8rem;
+    color: var(--grey);
+}
+
+/* ---- SERVICE ---- */
+
+.service {
+    background-image: url('../img/background-2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+
+.container-service {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 8rem 4rem;
+    gap: 2rem;
+}
+
+.container-service .container-text {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+/* ---- SERVICE - TEXT ---- */
+
+.service .container-text h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.service .container-text h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.service .container-text p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--grey);
+    padding-bottom: 40px;
+}
+
+.service .container-text .cta-btn a {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 65px;
+    border: 1px solid transparent;
+    background-color: var(--blue);
+    transition: all 0.3s ease-in-out;
+}
+
+.service .container-text .cta-btn a:hover {
+    border: 1px solid var(--grey);
+    background: transparent;
+    box-shadow: 0 0 50px var(--white);
+}
+
+/* ---- SERVICE - IMG ---- */
+
+.service .container-text .container-img {
+    width: 900px;
+}
+
+.container-img img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 25px var(--white);
+}
+
+/* ---- TECNOLOGY ---- */
+
+.tecnology {
+    background-image: url('../img/background-3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+
+.container-tecnology {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 6rem 4rem;
+    gap: 2rem;
+}
+
+/* ---- SERVICE - TEXT ---- */
+
+.container-tecnology .container-text {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+.tecnology .container-text h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.tecnology .container-text h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.tecnology .container-text p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--grey);
+    padding-bottom: 40px;
+}
+
+.tecnology .container-text .cta-btn a {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 65px;
+    border: 1px solid transparent;
+    background-color: var(--blue);
+    transition: all 0.3s ease-in-out;
+}
+
+.tecnology .container-text .cta-btn a:hover {
+    border: 1px solid var(--grey);
+    background: transparent;
+    box-shadow: 0 0 50px var(--white);
+}
+
+/* ---- TECNOLOGY - IMG ---- */
+
+.container-tecnology .container-img {
+    width: 900px;
+}
+
+.container-tecnology .container-img img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 25px var(--white);
+}
+
+/* ---- CONTRIES ---- */
+
+.countries {
+    background-image: url('../img/background-4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+
+.container-countries {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4rem;
+    gap: 2rem;
+}
+
+/* ---- CONTRIES TEXT ---- */
+
+.container-countries .container-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 4rem;
+    width: 100%;
+}
+
+.countries .container-text h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.countries .container-text h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.countries .container-text p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--grey);
+    padding-bottom: 40px;
+}
+
+/* ---- CONTRIES IMG ---- */
+
+.container-countries .container-img {
+    width: 100%;
+}
+
+.container-countries .container-img img {
+    box-shadow: none;
+    background-color: var(--black);
+    width: 100%;
+}
+
+/* ---- PRICE ---- */
+
+.price {
+    background-image: url('../img/formas-geometricas-abstractas-fondo-o-textura.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150vh;
+}
+
+.container-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 6rem 4rem;
+    height: 1200px;
+    gap: 2rem;
+}
+
+/* --- SIDE ---- */
+
+.pricing {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: transparent;
+}
+
+.pricing .options {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    justify-content: center;
+}
+
+.pricing .options a {
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 20px 150px;
+}
+
+.pricing .options a:hover {
+    background: var(--white);
+    color: var(--dark-blue);
+    box-shadow: 0 0 50px var(--white);
+}
+
+.pricing h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 3rem;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    border-radius: 8px;
+    margin-top: 5rem;
+}
+
+.pricing-table td {
+    padding: 20px;
+    border-top: 1px solid #4d4d4d;
+    border-bottom: 1px solid #4d4d4d;
+    background-color: transparent;
+}
+
+.pricing-table th {
+    background-color: transparent;
+    color: white;
+    font-size: 1.2rem;
+    padding: 2rem 3rem;
+
+    position: relative;
+}
+
+.pricing-table th .box {
+    position: absolute;
+    top: -1rem;
+    right: 2rem;
+    left: 2rem;
+
+    border: 1px solid var(--blue);
+    background: var(--white);
+    padding: 20px 55px;
+    color: #1899e4;
+    box-shadow: 5px 5px 10px var(--black);
+}
+
+.pricing-table th h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 3rem 0 1rem 0;
+}
+
+.pricing-table th h4 {
+    font-size: 1.1rem;
+    font-weight: 300;
+    padding: 3rem;
+}
+
+.pricing-table th p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-bottom: 4rem;
+}
+
+.pricing-table th p span {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.pricing-table th .btn {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 65px;
+    border: 1px solid transparent;
+    background-color: var(--blue);
+    transition: all 0.3s ease-in-out;
+    border-radius: none;
+}
+
+.pricing-table th .btn:hover {
+    border: 1px solid var(--grey);
+    background: transparent;
+    box-shadow: 0 0 50px var(--white);
+}
+
+.pricing-table .promo {
+    background-color: blue;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.pricing-table .price-tag {
+    background-color: var(--dark-blue);
+}
+
+.pricing-table td {
+    font-size: 1rem;
+    background: transparent;
+}
+
+/* ---- SIDE ---- */
+
+/* ---- ABOUT ---- */
+
+.about {
+    background-image: url('../img/formas-geometricas-abstractas-fondo-o-textura.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110vh;
+}
+
+.container-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 4rem;
+    height: 800px;
+    gap: 2rem;
+}
+
+/* ---- ABOUT TEXT ---- */
+
+.container-about .container-text {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.container-about .container-text h2 {
+    line-height: 4rem;
+}
+
+.container-about .container-text p {
+    line-height: 2rem;
+}
+
+/* ---- ABOUT CARDS ---- */
+
+.container-about .container-cards {
+    display: flex;
+    gap: 2rem;
+}
+
+.container-about .container-cards .card {
+    height: 260px;
+    width: 500px;
+    padding: 1rem 2rem;
+    background: var(--dark-blue);
+    border: 1px solid transparent;
+    box-shadow: 0 0 15px transparent;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 1.5rem;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.container-about .container-cards .card:hover {
+    border: 1px solid var(--blue);
+    box-shadow: 0 0 15px var(--grey);
+}
+
+.container-about .container-cards .card .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-about .container-cards .card .header .user {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    padding: 0.5rem 0;
+}
+
+.container-about .container-cards .card .header .user img {
+    height: 60px;
+    border-radius: 100%;
+}
+
+.container-about .container-cards .card .content{
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+}
+
+/* ---- CONTACT ---- */
+
+.contact {
+    background-image: url('../img/background-5.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+
+.contact .container-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 8rem 4rem;
+}
+
+/* ---- CONTACT TEXT ---- */
+
+.contact .container-contact .container-text-contact h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* ---- CONTACT BTN ---- */
+
+.contact .container-contact .join-btn {
+    text-transform: uppercase;
+    padding: 15px 75px;
+    border: 1px solid var(--white);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact .container-contact .join-btn:hover {
+    border: 1px solid transparent;
+    box-shadow: 0 0 50px var(--white);
+    background: var(--blue);
+    color: var(--white);
+}
+
+/* ---- FOOTER ---- */
+
+.footer {
+    background-image: url('../img/formas-geometricas-abstractas-fondo-o-textura.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+
+.footer .container-footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 6rem 4rem;
+    margin: 0 auto;
+}
+
+.footer .container-footer .container-min-about {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 3rem 0;
+    gap: 2rem;
+}
+
+.footer .container-footer .container-min-about h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.footer .container-footer .container-min-about p {
+    font-size: 1rem;
+    font-weight: 200;
+    color: var(--grey);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer .container-footer .container-min-about p:hover {
+    color: var(--white);
+    text-shadow: 0 0 25px var(--white);
+}
+
+/* ---- FOOTER BTN ---- */
+
+.footer .container-footer .container-min-about-btn {
+    display: flex;
+    align-items: center;
+}
+
+.footer .container-footer .container-min-about-btn a {
+    font-size: 1.1rem;
+    border: 1px solid var(--white);
+    padding: 15px 55px;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer .container-footer .container-min-about-btn a:hover {
+    border: 1px solid transparent;
+    color: var(--white);
+    background: var(--blue);
+    box-shadow: 0 0 25px var(--white);
+}
+
+
+
+
+
+
+
